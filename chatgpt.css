@@ -1,0 +1,168 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #0066cc, #00cc99);
+    border-radius: 40px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.search-box {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: transform 0.2s ease;
+}
+
+.search-box:focus {
+    transform: scale(1.05);
+}
+
+.login-btn {
+    background: white;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #0066cc;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #004c99;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    border-radius: 10px;
+    margin: 30px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #333;
+    animation: textSlide 1.5s ease;
+}
+
+.hero p {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.cta-btn {
+    padding: 12px 25px;
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+    background: #e64a19;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: linear-gradient(145deg, #fff, #f1f1f1);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(to right, #0066cc, #00cc99);
+    color: white;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes textSlide {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
