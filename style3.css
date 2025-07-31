@@ -1,24 +1,27 @@
 /* page 3 */
 
 .page3 {
-    height: 112vh;
+    height: 210vh;
     background: linear-gradient(90deg, #117bdd,#25fc42a2);
     display: flex;
+    padding: 9vh;
     /* margin-top: 45px; */
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
 }
 
 .card {
     background-color: rgb(252, 249, 243);
-    width: 344px;
-    height: 490px;
+    width: 28vw;
+    height: 90vh;
     border-radius: 9px;
     margin-right: 10px;
 }
 
 img {
-    width: 330px;
+    margin-left: 0.5vw;
+    width: 26vw;
     border: 1px solid black;
     border-radius: 6px;
 }
@@ -35,6 +38,7 @@ img {
 .content h2 {
     padding: 0;
     margin: 0;
+    margin-bottom: 12px;
 }
 
 .content p {
@@ -43,9 +47,9 @@ img {
     padding: 0 0 20px 0;
 }
 
-.capsule {
+/* .capsule {
     padding: 1px;
-    /* text-align: center; */
+    /* text-align: center; 
     margin-left: 9px;
 }
 
@@ -54,7 +58,7 @@ img {
     border-radius: 34px;
     padding: 3px;
     font-size: 15px;
-}
+} */
 
 .button {
     text-align: center;
@@ -76,4 +80,98 @@ img {
 .button button:hover {
     background-color: blue;
     color: azure;
+}
+
+
+/* .faq{
+    /* background-color: rgb(37, 36, 36); 
+    color: white;
+     margin: auto;
+    margin-top: 23px;
+    
+    max-width: 70vw;
+    /* gap: 
+}
+.faq h2{
+    margin-bottom: 23px;
+}
+
+.faqbox{
+    color: white;
+    background-color: rgb(21,21,34);
+    padding: 18px 13px 18px 21px;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 100;
+    filter: brightness(201%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 33px; 
+     margin-bottom: 11px;
+     
+}
+.faqbox:hover{
+    cursor: pointer;
+    background-color: rgb(43, 40, 40);
+} */
+/* .faqbox img{
+    
+    filter: invert(1);
+}
+
+footer{
+    color: rgb(185, 17, 17);
+    max-width: 60vw;
+    margin: auto;
+    padding: 14px;
+}
+footer .questions{
+    padding: 34px 0;
+} */
+
+.footer{
+    display: grid;
+    height: 54vh;
+    background-color: rgb(20, 20, 68);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;  
+    padding-left: 5vw;
+}
+.footer a{
+    font-size: 17px;
+    color: white;
+    /* width: 10vw; */
+    padding: 4px;
+}
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    margin: 2vw;
+    margin-top: 11vh;
+}
+
+.footer a:hover{
+    /* font-size: 27px; */
+    transform: scale(1.1);
+    border: 1px solid rgba(243, 223, 223, 0.514);
+    
+}
+
+.footer-bottom {
+    text-align: center;
+    /* position: center; */
+    height: 7vh;
+    font-size: 19px;
+    font-weight: 550;
+    color: darkblue;
+    background-color: white;
+    padding-top: 20px;
+}
+
+.separate{
+    height: 1vh;
+    background-color: white;
 }

@@ -4,7 +4,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #0137e76e, #e6b61991);
+    background: linear-gradient(to bottom, #0137e76e, #2c220291);
     transition: all 0.5s ease;
 }
 
@@ -22,7 +22,7 @@ body {
     margin-top: 4vh;
     margin-left: 5vw;
     border: 3px solid rgb(1, 1, 39);
-    border-radius: 95px;
+    border-radius: 25px;
     backdrop-filter: blur(5px);
     justify-content: space-evenly;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -189,7 +189,9 @@ body {
     margin: 20px;
     margin-right: 3vw;
     /* margin-left: 54px; */
-    background: linear-gradient(to right, #2bf502, #f1ba02);
+    /* background: linear-gradient(to right, #8299f7a4, #24c5da62); */
+    background: linear-gradient(to right, #ece9e6, #ffffff, #c9d6ff);
+
     animation: fadeIn 1.5s ease;
     display: flex;
     flex-direction: column;
@@ -304,7 +306,8 @@ input::placeholder{
      flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #25fc42a2, #117bdd);
+    background: linear-gradient(90deg, #41f158a2, #4994db);
+    /* background: linear-gradient(to right, #d9a7c7, #fffcdc); */
 }
 .page2-text{
     font-size: 3em;
@@ -340,20 +343,22 @@ input::placeholder{
 .card1 {
     width: 90vw;
     height: 18vh;
-    background: linear-gradient(to right, #011cb8, #8328eb);
+    background: linear-gradient(10deg, #f0ebef, #8328eb);
     
 }
 
 .card2 {
     width: 90vw;
     height: 18vh;
-    background: linear-gradient(to right, #011cb8, #8328eb);
+    /* background: linear-gradient(to right, #011cb8, #8328eb); */
+    background: linear-gradient(to top, #cfc5b9, #2b2928);
 }
 
 .card3 {
     width: 90vw;
     height: 18vh;
-    background: linear-gradient(to right, #011cb8, #8328eb);
+    /* background: linear-gradient(to right, #011cb8, #8328eb); */
+    background: linear-gradient(to bottom, #ada391, #CDB9D8);
 }
 .para1{
     color: white;
