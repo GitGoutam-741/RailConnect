@@ -3,7 +3,7 @@
     padding: 0%;
 }
 
-body {
+html,body {
     background: linear-gradient(to bottom, #0137e76e, #2c220291);
     transition: all 0.5s ease;
 }

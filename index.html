@@ -1,296 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RailConnect</title>
-    <link rel="website icon" type="png" href="download (2).jpeg">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style3.css">
-</head>
+    <link rel="website icon" type="png" href="download (2).jpeg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style3.css" />
+  </head>
 
-<body>
+  <body>
     <script src="script.js"></script>
 
     <div class="header">
-        <div class="navbar">
-            <ul>
-                <li><a href="#" class="logo">RailConnect</a></li>
-                <li><a href="#">Train Time</a></li>
-                <li><a href="#">Ticket Booking</a></li>
-                <li><a href="#">Ticket Status</a></li>
-                <li><a href="#">Make a Travel Plan</a></li>
+      <div class="navbar">
+        <ul>
+          <li><a href="#" class="logo">RailConnect</a></li>
+          <li><a href="#">Train Time</a></li>
+          <li><a href="#">Ticket Booking</a></li>
+          <li><a href="#">Ticket Status</a></li>
+          <li><a href="#">Make a Travel Plan</a></li>
 
-                <div class="right2">
-                    <!-- <li> <img src="global-stroke-rounded.svg" alt=""> <span> English </span></li> -->
-                    <!-- <li> <img src="search-01-stroke-rounded.svg" alt="search"> </li> -->
-                    <!-- BY CHATGPT -->
-                    <!-- <div class="search-container">
+          <div class="right2">
+            <!-- <li> <img src="global-stroke-rounded.svg" alt=""> <span> English </span></li> -->
+            <!-- <li> <img src="search-01-stroke-rounded.svg" alt="search"> </li> -->
+            <!-- BY CHATGPT -->
+            <!-- <div class="search-container">
                             <span class="search-icon">📍</span>
                             <input type="text" id="searchInput" placeholder="Search...">
                         </div> -->
-                    <!-- BY CHATGPT -->
-                    <button class="login-btn">LOGIN</button>
-                </div>
-            </ul>
-        </div>
+            <!-- BY CHATGPT -->
+            <label for="login">
+              <button id="login" class="login-btn">
+                <a id="login" target="_blank" href="/login-button/login.html"
+                  >LOGIN</a
+                >
+              </button>
+            </label>
+          </div>
+        </ul>
+      </div>
     </div>
 
     <div class="page1">
-        <!-- BY CHATGPT -->
-        <!-- Hero Section -->
-        <div class="page1middle">
-            <section class="hero1">
-                <h1>Welcome To RailConnect</h1>
-                <p>Your one-stop solution for train schedules, bookings, and real-time updates.</p>
+      <!-- BY CHATGPT -->
+      <!-- Hero Section -->
+      <div class="page1middle">
+        <section class="hero1">
+          <h1>Welcome To RailConnect</h1>
+          <p>
+            Your one-stop solution for train schedules, bookings, and real-time
+            updates.
+          </p>
+        </section>
+        <section class="hero">
+          <h1>BOOK TICKET</h1>
+          <div class="middle">
+            <div class="from">
+              <input type="text" placeholder="From" />
 
-            </section>
-            <section class="hero">
-                <h1>BOOK TICKET</h1>
-                <div class="middle">
-                    <div class="from">
-                        <input type="text" placeholder="From">
+              <input type="text" placeholder="To" />
+            </div>
+            <div class="date">
+              <input class="page1date" type="date" />
 
-
-                        <input type="text" placeholder="To">
-                    </div>
-                    <div class="date">
-                        <input class="page1date" type="date">
-
-                        <div class="dropdown-container">
-                            <select id="train-class">
-                                <option value="all">All Classes</option>
-                                <option value="EA">Anubhutii Class (EA)</option>
-                                <option value="1A">AC First Class (1A)</option>
-                                <option value="EV">Vistadome AC (EV)</option>
-                                <option value="EC">Exec. Chair Car (EC)</option>
-                                <option value="2A">AC 2 Tier (2A)</option>
-                                <option value="FC">First Class (FC)</option>
-                            </select>
-                        </div>
-
-
-
-
-                    </div>
-                </div>
-                <button class="cta-btn">Book Tickets Now</button>
-            </section>
-        </div>
+              <div class="dropdown-container">
+                <select id="train-class">
+                  <option value="all">All Classes</option>
+                  <option value="EA">Anubhutii Class (EA)</option>
+                  <option value="1A">AC First Class (1A)</option>
+                  <option value="EV">Vistadome AC (EV)</option>
+                  <option value="EC">Exec. Chair Car (EC)</option>
+                  <option value="2A">AC 2 Tier (2A)</option>
+                  <option value="FC">First Class (FC)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <button class="cta-btn">Book Tickets Now</button>
+        </section>
+      </div>
     </div>
 
     <div class="separate"></div>
     <div class="page2">
-        <div class="page2-text">Have you not found the right one?
-            Find a service suitable for you here.</div>
-        <!-- Features Section -->
-        <section class="features">
-            <div class="feature-card card1">
-                <div>
-                    <div class="para1">Live Train Status</div>
-                    <div class="para2">Live Train Status gives real-time updates on a train’s location, arrival, and
-                        delays.
-                        It helps passengers track their journey and plan travel with ease.</div>
-                </div>
-                <div class="card-pic"></div>
+      <div class="page2-text">
+        Have you not found the right one? Find a service suitable for you here.
+      </div>
+      <!-- Features Section -->
+      <section class="features">
+        <div class="feature-card card1">
+          <div>
+            <div class="para1">Live Train Status</div>
+            <div class="para2">
+              Live Train Status gives real-time updates on a train’s location,
+              arrival, and delays. It helps passengers track their journey and
+              plan travel with ease.
             </div>
-            <div class="feature-card card2">
-                <div>
-                    <div class="para1">Easy Booking</div>
-                    <div class="para2">Easy Booking allows passengers to quickly book both reserved and unreserved
-                        tickets
-                        online, making the process fast, convenient, and hassle-free.</div>
-
-                </div>
-                <div class="card-pic"></div>
+          </div>
+          <div class="card-pic"></div>
+        </div>
+        <div class="feature-card card2">
+          <div>
+            <div class="para1">Easy Booking</div>
+            <div class="para2">
+              Easy Booking allows passengers to quickly book both reserved and
+              unreserved tickets online, making the process fast, convenient,
+              and hassle-free.
             </div>
-            <div class="feature-card card3">
-                <div>
-                    <div class="para1">Make a Travel Plan</div>
-                    <div class="para2">ChatGPT said:
-                        Make a Travel Plan helps passengers find the shortest and most affordable routes, ensuring a
-                        budget-friendly and time-saving journey.</div>
-                </div>
-                <div class="card-pic">
-                    <img src="makeAtravelPlan.avif" alt="">
-                </div>
+          </div>
+          <div class="card-pic"></div>
+        </div>
+        <div class="feature-card card3">
+          <div>
+            <div class="para1">Make a Travel Plan</div>
+            <div class="para2">
+              ChatGPT said: Make a Travel Plan helps passengers find the
+              shortest and most affordable routes, ensuring a budget-friendly
+              and time-saving journey.
             </div>
-        </section>
+          </div>
+          <div class="card-pic">
+            <!-- <img src="makeAtravelPlan.avif" alt=""> -->
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- PAGE 3 CARDS -->
     <div class="page3">
-        <div class="page3-text">HOLIDAYS</div>
-        <div class="cards">
-            <div class="card">
-                <div class="pic">
-                    <img src="cardphoto1.jpg" alt="">
-                </div>
+      <div class="page3-text">HOLIDAYS</div>
+      <div class="cards">
+        <div class="card">
+          <div class="pic">
+            <img src="cardphoto1.jpg" alt="" />
+          </div>
 
-                <!-- <div class="capsule">
+          <!-- <div class="capsule">
                 <span>Nature</span>
                 <span>Pigeon</span>
             </div> -->
-                <div class="content">
-                    <h2>Bharat Gaurav Tourist Train</h2>
-                    <p>IRCTC operates Bharat Gaurav Tourist Train having AC III-Tier accommodation on train specially
-                        designed to promote domestic tourism in India. This train runs on various theme based circuits
-                        covering pilgrimage and heritage destinations in its itinerary on a 5 days to 20 days trip and
-                        showcase India’s rich cultural heritage.</p>
-                </div>
-                <!-- <div class="button">
+          <div class="content">
+            <h2>Bharat Gaurav Tourist Train</h2>
+            <p>
+              IRCTC operates Bharat Gaurav Tourist Train having AC III-Tier
+              accommodation on train specially designed to promote domestic
+              tourism in India. This train runs on various theme based circuits
+              covering pilgrimage and heritage destinations in its itinerary on
+              a 5 days to 20 days trip and showcase India’s rich cultural
+              heritage.
+            </p>
+          </div>
+          <!-- <div class="button">
                 <button>Read More</button>
             </div> -->
-            </div>
-            <div class="card">
-                <div class="pic">
-                    <img src="cardphoto2.jpg" alt="">
-                </div>
-
-                <!-- <div class="capsule">
-                <span>Nature</span>
-                <span>Pigeon</span>
-            </div> -->
-                <div class="content">
-                    <h2>Maharajas' Express</h2>
-                    <p>Redefining Royalty, Luxury and Comfort, Maharajas' express takes you on a sojourn to the era of
-                        bygone stately splendour of princely states. Sylvan furnishings, elegant ambience and modern
-                        amenities are amalgamated for an “Experience Unsurpassed”. It has been a winner of “World’s
-                        Leading
-                        Luxury train” by World Travel Awards consecutively for last six years.</p>
-                </div>
-                <!-- <div class="button">
-                <button>Read More</button>
-            </div> -->
-            </div>
-            <div class="card">
-                <div class="pic">
-                    <img src="cardphoto3.jpg" alt="">
-                </div>
-
-                <!-- <div class="capsule">
-                <span>Nature</span>
-                <span>Pigeon</span>
-            </div> -->
-                <div class="content">
-                    <h2>International Packages</h2>
-                    <p>Best deals in International Holiday packages, handpicked by IRCTC, for Thailand, Dubai, Sri
-                        Lanka,
-                        Hong Kong, China, Macau, Bhutan, Nepal, U.K., Europe, USA, Australia etc. The packages are
-                        inclusive
-                        of sightseeing, meals, visa charges and overseas medical insurance to give you a hassle-free and
-                        memorable experience.</p>
-                </div>
-                <!-- <div class="button">
-                <button>Read More</button>
-            </div> -->
-            </div>
-            <div class="card">
-                <div class="pic">
-                    <img src="cardphoto4.jpg" alt="">
-                </div>
-
-                <!-- <div class="capsule">
-                <span>Nature</span>
-                <span>Pigeon</span>
-            </div> -->
-                <div class="content">
-                    <h2>Domestic Air Packages
-                    </h2>
-                    <p>Be it the spiritual devotee seeking blessings of Tirupati, Shirdi or Mata Vaishno Devi or the
-                        leisure
-                        traveller wanting to relish the Blue mountains of North East, Sand-dunes of Rajasthan, Hamlets
-                        of
-                        Ladakh, Wonders of Himalayas, Serene lakes or Picturesque Islands, IRCTC has it all. Discover
-                        India
-                        through IRCTC!</p>
-                </div>
-                <!-- <div class="button">
-                <button>Read More</button>
-            </div> -->
-            </div>
-            <div class="card">
-                <div class="pic">
-                    <img src="cardphoto5.jpg" alt="">
-                </div>
-
-                <!-- <div class="capsule">
-                <span>Nature</span>
-                <span>Pigeon</span>
-            </div> -->
-                <div class="content">
-                    <h2>Rail Tour Packages</h2>
-                    <p>IRCTC offers Exclusive Rail tour packages with confirmed train tickets, sight-seeing and meals
-                        for
-                        enchanting Nilgiri Mountains, Darjeeling, Kullu Manali, Kashmir, Gangtok or divine tours of Mata
-                        Vaishno Devi, Rameswaram, Madurai, Shirdi, Tirupati etc. Holiday packages/ Land packages to
-                        these
-                        destinations are also available.</p>
-                </div>
-                <!-- <div class="button">
-                <button>Read More</button>
-            </div> -->
-            </div>
         </div>
-    </div>
+        <div class="card">
+          <div class="pic">
+            <img src="cardphoto2.jpg" alt="" />
+          </div>
 
+          <!-- <div class="capsule">
+                <span>Nature</span>
+                <span>Pigeon</span>
+            </div> -->
+          <div class="content">
+            <h2>Maharajas' Express</h2>
+            <p>
+              Redefining Royalty, Luxury and Comfort, Maharajas' express takes
+              you on a sojourn to the era of bygone stately splendour of
+              princely states. Sylvan furnishings, elegant ambience and modern
+              amenities are amalgamated for an “Experience Unsurpassed”. It has
+              been a winner of “World’s Leading Luxury train” by World Travel
+              Awards consecutively for last six years.
+            </p>
+          </div>
+          <!-- <div class="button">
+                <button>Read More</button>
+            </div> -->
+        </div>
+        <div class="card">
+          <div class="pic">
+            <img src="cardphoto3.jpg" alt="" />
+          </div>
+
+          <!-- <div class="capsule">
+                <span>Nature</span>
+                <span>Pigeon</span>
+            </div> -->
+          <div class="content">
+            <h2>International Packages</h2>
+            <p>
+              Best deals in International Holiday packages, handpicked by IRCTC,
+              for Thailand, Dubai, Sri Lanka, Hong Kong, China, Macau, Bhutan,
+              Nepal, U.K., Europe, USA, Australia etc. The packages are
+              inclusive of sightseeing, meals, visa charges and overseas medical
+              insurance to give you a hassle-free and memorable experience.
+            </p>
+          </div>
+          <!-- <div class="button">
+                <button>Read More</button>
+            </div> -->
+        </div>
+        <div class="card">
+          <div class="pic">
+            <img src="cardphoto4.jpg" alt="" />
+          </div>
+
+          <!-- <div class="capsule">
+                <span>Nature</span>
+                <span>Pigeon</span>
+            </div> -->
+          <div class="content">
+            <h2>Domestic Air Packages</h2>
+            <p>
+              Be it the spiritual devotee seeking blessings of Tirupati, Shirdi
+              or Mata Vaishno Devi or the leisure traveller wanting to relish
+              the Blue mountains of North East, Sand-dunes of Rajasthan, Hamlets
+              of Ladakh, Wonders of Himalayas, Serene lakes or Picturesque
+              Islands, IRCTC has it all. Discover India through IRCTC!
+            </p>
+          </div>
+          <!-- <div class="button">
+                <button>Read More</button>
+            </div> -->
+        </div>
+        <div class="card">
+          <div class="pic">
+            <img src="cardphoto5.jpg" alt="" />
+          </div>
+
+          <!-- <div class="capsule">
+                <span>Nature</span>
+                <span>Pigeon</span>
+            </div> -->
+          <div class="content">
+            <h2>Rail Tour Packages</h2>
+            <p>
+              IRCTC offers Exclusive Rail tour packages with confirmed train
+              tickets, sight-seeing and meals for enchanting Nilgiri Mountains,
+              Darjeeling, Kullu Manali, Kashmir, Gangtok or divine tours of Mata
+              Vaishno Devi, Rameswaram, Madurai, Shirdi, Tirupati etc. Holiday
+              packages/ Land packages to these destinations are also available.
+            </p>
+          </div>
+          <!-- <div class="button">
+                <button>Read More</button>
+            </div> -->
+        </div>
+      </div>
+    </div>
 
     <div class="separate"></div>
     <!-- Footer -->
 
     <!-- <footer> -->
     <div class="footer">
-        <div class="footer-item">
-            <a target="_blank" href="https://contents.irctc.co.in/en/CancellationRulesforIRCTCTrain.pdf">Ticket
-                Cancellation Rules</a>
-            <a target="_blank" href="faq">Foreign Tourist T&C</a>
-            <a target="_blank" href="faq">Terms & Conditions</a>
-            <a target="_blank" href="faq">PNR Enquiry</a>
-            <a target="_blank" href="">Train Enquiry</a>
-        </div>
+      <div class="footer-item">
+        <a
+          target="_blank"
+          href="https://contents.irctc.co.in/en/CancellationRulesforIRCTCTrain.pdf"
+          >Ticket Cancellation Rules</a
+        >
+        <a target="_blank" href="faq">Foreign Tourist T&C</a>
+        <a target="_blank" href="faq">Terms & Conditions</a>
+        <a target="_blank" href="faq">PNR Enquiry</a>
+        <a target="_blank" href="">Train Enquiry</a>
+      </div>
 
-        <div class="footer-item">
-            <a target="_blank" href="faq">Important Information</a>
-            <a target="_blank" href="faq">Investo</a>
-            <a target="_blank" href="faq">Investor Relations</a>
-            <a target="_blank" href="faq">Investor Relations</a>
-            <a target="_blank" href="faq">Investor Relations</a>
-        </div>
+      <div class="footer-item">
+        <a target="_blank" href="faq">Important Information</a>
+        <a target="_blank" href="faq">Investo</a>
+        <a target="_blank" href="faq">Investor Relations</a>
+        <a target="_blank" href="faq">Investor Relations</a>
+        <a target="_blank" href="faq">Investor Relations</a>
+      </div>
 
-        <div class="footer-item">
-            <a target="_blank" href="faq">FAQ</a>
-            <a target="_blank" href="faq">Investor Relations</a>
-            <a target="_blank" href="faq">Investor Relations</a>
-            <a target="_blank" href="faq">Investor Relations</a>
-            <a target="_blank" href="faq">Investor Relations</a>
-        </div>
+      <div class="footer-item">
+        <a target="_blank" href="faq">FAQ</a>
+        <a target="_blank" href="faq">Investor Relations</a>
+        <a target="_blank" href="faq">Investor Relations</a>
+        <a target="_blank" href="faq">Investor Relations</a>
+        <a target="_blank" href="faq">Investor Relations</a>
+      </div>
 
-        <div class="footer-item">
-            <a target="_blank" href="faq">FAQ</a>
-            <a target="_blank" href="faq">Investor Relations</a>
-            <a target="_blank" href="faq">Investor Relations</a>
-            <a target="_blank" href="faq">Help & Support</a>
-            <a target="_blank" href="faq">FAQ </a>
-        </div>
+      <div class="footer-item">
+        <a target="_blank" href="faq">FAQ</a>
+        <a target="_blank" href="faq">Investor Relations</a>
+        <a target="_blank" href="faq">Investor Relations</a>
+        <a target="_blank" href="faq">Help & Support</a>
+        <a target="_blank" href="faq">FAQ </a>
+      </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2025 RailConnect. All rights reserved.
+      &copy; 2025 RailConnect. All rights reserved.
     </div>
     <!-- </footer> -->
 
-
     <script>
-        // Filter Function for Search
-        document.getElementById("dropdownSearch").addEventListener("input", function () {
-            const filter = this.value.toLowerCase();
-            const items = document.querySelectorAll("#dropdownList li:not(.group)");
-            items.forEach(item => {
-                item.style.display = item.textContent.toLowerCase().includes(filter) ? "block" : "none";
-            });
+      // Filter Function for Search
+      document
+        .getElementById("dropdownSearch")
+        .addEventListener("input", function () {
+          const filter = this.value.toLowerCase();
+          const items = document.querySelectorAll(
+            "#dropdownList li:not(.group)"
+          );
+          items.forEach((item) => {
+            item.style.display = item.textContent.toLowerCase().includes(filter)
+              ? "block"
+              : "none";
+          });
         });
     </script>
-
-</body>
-
+  </body>
 </html>
