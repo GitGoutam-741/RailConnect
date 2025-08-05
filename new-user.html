@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Here</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="new-user.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2><u>Registration Here</u></h2>
+        <form id="registrationForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="captcha">Captcha:</label>
+            <div class="captcha-container">
+                <div id="captcha" class="captcha-box">AB123</div>
+                <button type="button" class="refresh-btn" onclick="generateCaptcha()">↻ Refresh</button>
+            </div>
+            <input type="text" id="captchaInput" name="captchaInput" placeholder="Enter Captcha" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script src="new-user.js"></script>
+        
+</body>
+</html>
