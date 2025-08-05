@@ -2,21 +2,39 @@
 
 .page3 {
     height: 210vh;
-    background: linear-gradient(90deg, #117bdd,#25fc42a2);
+    /* background: linear-gradient(90deg, #117bdd,#25fc42a2); */
+    background-color: rgb(253, 252, 252);
     display: flex;
     padding: 9vh;
     /* margin-top: 45px; */
     justify-content: center;
     /* align-items: center; */
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+}
+
+.page3-text{
+    font-size: 3em;
+    font-weight: 700;
+    /* width: 55vw; */
+    text-align: center;
+   
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+
 }
 
 .card {
-    background-color: rgb(252, 249, 243);
+    background-color: rgb(156, 154, 150);
     width: 28vw;
     height: 90vh;
     border-radius: 9px;
-    margin-right: 10px;
+    margin: 1vw;
+    box-shadow: 0 4px 10px rgba(126, 156, 238, 0.3);
 }
 
 img {
@@ -173,5 +191,5 @@ footer .questions{
 
 .separate{
     height: 1vh;
-    background-color: white;
+    background-color: rgb(151, 1, 156);
 }

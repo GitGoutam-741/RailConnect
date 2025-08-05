@@ -58,7 +58,7 @@ body {
 }
 
 .navbar ul li a:hover {
-    color: rgb(252, 253, 253);
+    color: rgb(1, 18, 172);
     text-shadow: rgb(27, 17, 17);
     /* border: 1px dashed white; */
     /* border-radius: 11px; */
@@ -190,7 +190,7 @@ body {
     margin-right: 3vw;
     /* margin-left: 54px; */
     /* background: linear-gradient(to right, #8299f7a4, #24c5da62); */
-    background: linear-gradient(to right, #ece9e6, #ffffff, #c9d6ff);
+    background: linear-gradient(to right, #c0bfbdc7, #d8d7d7ce, #b7c3e9bb);
 
     animation: fadeIn 1.5s ease;
     display: flex;
@@ -306,13 +306,15 @@ input::placeholder{
      flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #41f158a2, #4994db);
+    /* background: linear-gradient(90deg, #41f158a2, #4994db); */
     /* background: linear-gradient(to right, #d9a7c7, #fffcdc); */
+    background-color: rgb(253, 252, 252);
 }
 .page2-text{
     font-size: 3em;
     font-weight: 700;
     width: 55vw;
+    text-align: center;
    
 }
 .features {
@@ -343,7 +345,7 @@ input::placeholder{
 .card1 {
     width: 90vw;
     height: 18vh;
-    background: linear-gradient(10deg, #f0ebef, #8328eb);
+    background: linear-gradient(170deg, #8c3ae9, #b65fb6);
     
 }
 
@@ -351,14 +353,16 @@ input::placeholder{
     width: 90vw;
     height: 18vh;
     /* background: linear-gradient(to right, #011cb8, #8328eb); */
-    background: linear-gradient(to top, #cfc5b9, #2b2928);
+    /* background: linear-gradient(to top, #cfc5b9, #2b2928); */
+    background: linear-gradient(170deg, #8c3ae9, #b65fb6);
 }
 
 .card3 {
     width: 90vw;
     height: 18vh;
     /* background: linear-gradient(to right, #011cb8, #8328eb); */
-    background: linear-gradient(to bottom, #ada391, #CDB9D8);
+    /* background: linear-gradient(to bottom, #ada391, #CDB9D8); */
+    background: linear-gradient(170deg, #8c3ae9, #b65fb6);
 }
 .para1{
     color: white;
