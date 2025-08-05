@@ -3,29 +3,36 @@
     padding: 0%;
 }
 
+:root {
+    --main-gradient: linear-gradient(170deg, #8c3ae9, #b342b3);
+}
+
+
 body {
-    background: linear-gradient(to bottom, #0137e76e, #2c220291);
+    background-color: rgb(234, 234, 241);
     transition: all 0.5s ease;
 }
 
 .header {
     height: 14vh;
     position: sticky;
-    top: 2vh;
+    top: 1vh;
     z-index: 1000;
     background: transparent;
+
 }
 
 .navbar {
     width: 90vw;
     height: 12vh;
-    margin-top: 4vh;
+    margin-top: 1.5vh;
     margin-left: 5vw;
     border: 3px solid rgb(1, 1, 39);
-    border-radius: 25px;
-    backdrop-filter: blur(5px);
+    border-radius: 19px;
+    /* backdrop-filter: blur(5px); */
+    background-color: #37e5f1ee;
     justify-content: space-evenly;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(85, 84, 84, 0.274);
     animation: fadeInDown 0.5s ease;
 }
 
@@ -64,6 +71,8 @@ body {
     /* border-radius: 11px; */
 }
 
+
+
 /* CHATGPT DOWN */
 .navbar a {
     text-decoration: none;
@@ -97,7 +106,7 @@ body {
 }
 
 .right2 {
-    padding-left: 134px;
+    width: 20vw;
     display: flex;
     gap: 33px;
     align-items: center;
@@ -106,30 +115,28 @@ body {
 
 /* BY CHATGPT DOWN */
 .login-btn {
-  background: linear-gradient(90deg, #7b42f6, #b01eff);
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 12px 40px;
-  margin-top: 13px;
-  /* border: none; */
-  border: 2px solid rgb(252, 252, 253);
-  border-radius: 50px;
-  cursor: pointer;
-  outline: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: linear-gradient(90deg, #7b42f6, #b01eff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 40px;
+    margin-top: 13px;
+    /* border: none; */
+    border: 2px solid rgb(252, 252, 253);
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .login-btn:hover {
-  transform: scale(1.1);
-  background: linear-gradient(56deg, #b01eff, #7b42f6);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    background: linear-gradient(56deg, #b01eff, #7b42f6);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
+
 /* BY CHATGPT UP */
-/* .right2 li:nth-child(1){
-            gap: 7px;            
-        } */
 
 .page1 {
     height: 82vh;
@@ -143,12 +150,10 @@ body {
     flex-direction: column;
     /* align-items: center; */
     /* justify-content: center; */
-    filter: brightness(85%);
-
 }
 
 
-.page1middle{
+.page1middle {
     display: flex;
     /* align-items: center; */
     justify-content: center;
@@ -162,18 +167,17 @@ body {
     padding: 50px;
     margin: 20px;
 }
+
 .hero1 h1 {
-    margin-bottom: 32px ;
+    margin-bottom: 32px;
     font-size: 2.5rem;
     animation: textSlide 1.5s ease;
 }
+
 .hero1 p {
     font-weight: 400;
     font-size: 1.5rem;
 }
-
-
-
 
 /* BY CHATGPT */
 
@@ -196,20 +200,27 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+
 .hero h1 {
+    font-family: sans-serif;
     font-size: 2.5rem;
     animation: textSlide 1.5s ease;
 }
+
 .hero p {
+
+    font-weight: 350;
     font-size: 1.5rem;
 }
-.middle{
+
+.middle {
     display: flex;
     align-items: center;
     height: 40vh;
-}   
+}
 
-#train-class{
+#train-class {
     width: 16vw;
     padding: 15px 22px;
     margin: 23px;
@@ -219,75 +230,78 @@ body {
 
 /* BY CHATGPT DOWN */
 select {
-  padding: 12px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
-  color: #fff;
-  font-weight: bold;
-  outline: none;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  appearance: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    appearance: none;
 }
 
 select:hover {
-  transform: scale(1.05);
-  background: linear-gradient(90deg, #2575fc, #6a11cb);
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
 }
 
 select option {
-  color: #333;
-  background-color: #fff;
-  font-size: 15px;
-  padding: 10px;
+    color: #333;
+    background-color: #fff;
+    font-size: 15px;
+    padding: 10px;
 }
 
 
 input {
-     width: 13vw;
+    width: 13vw;
     padding: 11px;
     margin: 23px;
     border: 1px solid black;
     border-radius: 12px;
 
-  padding: 12px 20px;
-  font-size: 16px;
-  /* border: none; */
-  border-radius: 8px;
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
-  color: #ffffff;
-  font-weight: bold;
-  outline: none;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  appearance: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    /* border: none; */
+    border-radius: 8px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: #ffffff;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    appearance: none;
 }
 
 input:hover {
-  transform: scale(1.05);
-  background: linear-gradient(90deg, #2575fc, #6a11cb);
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
 }
 
 input select option {
-  color: #3a3838;
-  background-color: #fff;
-  font-size: 15px;
-  padding: 10px;
+    color: #3a3838;
+    background-color: #fff;
+    font-size: 15px;
+    padding: 10px;
 }
+
 /* BY CHATGPT UP */
-input::placeholder{
+input::placeholder {
     color: white;
 }
 
 
 
 .cta-btn {
+    font-size: 21px;
+    font-weight: 580;
     padding: 10px 20px;
-    background-color: #0066cc;
+    background-color: #016dda;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -295,30 +309,33 @@ input::placeholder{
 }
 
 .cta-btn:hover {
-    background-color: #004c99;
+    background-color: #012346;
 }
 
+
 /* Features Section */
-.page2{
+.page2 {
     height: 111vh;
     width: 100vw;
-     display: flex;
-     flex-direction: column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     /* background: linear-gradient(90deg, #41f158a2, #4994db); */
     /* background: linear-gradient(to right, #d9a7c7, #fffcdc); */
     background-color: rgb(253, 252, 252);
 }
-.page2-text{
+
+.page2-text {
     font-size: 3em;
     font-weight: 700;
     width: 55vw;
     text-align: center;
-   
+
 }
+
 .features {
-    
+
     display: flex;
     justify-content: space-around;
     margin: 20px;
@@ -326,7 +343,7 @@ input::placeholder{
 }
 
 .feature-card {
-    
+
     background-color: #fff;
     padding: 20px;
     margin: 10px;
@@ -336,6 +353,7 @@ input::placeholder{
     text-align: center;
     display: flex;
 }
+
 .feature-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
@@ -345,44 +363,42 @@ input::placeholder{
 .card1 {
     width: 90vw;
     height: 18vh;
-    background: linear-gradient(170deg, #8c3ae9, #b65fb6);
-    
+    background-image: var(--main-gradient);
+
 }
 
 .card2 {
     width: 90vw;
     height: 18vh;
-    /* background: linear-gradient(to right, #011cb8, #8328eb); */
-    /* background: linear-gradient(to top, #cfc5b9, #2b2928); */
-    background: linear-gradient(170deg, #8c3ae9, #b65fb6);
+    background-image: var(--main-gradient);
 }
 
 .card3 {
     width: 90vw;
     height: 18vh;
-    /* background: linear-gradient(to right, #011cb8, #8328eb); */
-    /* background: linear-gradient(to bottom, #ada391, #CDB9D8); */
-    background: linear-gradient(170deg, #8c3ae9, #b65fb6);
+    background-image: var(--main-gradient);
 }
-.para1{
+
+.para1 {
     color: white;
     font-size: x-large;
     font-weight: 600;
-    text-decoration:underline;
+    text-decoration: underline;
     display: flex;
     justify-items: flex-start;
     padding-left: 13vw;
     /* text-align: justify; */
 }
-.para2{
+
+.para2 {
     width: 38vw;
     font-size: 21px;
     font-weight: 180;
 }
 
 
-.card-pic img{
-    margin-left: 15vw;  
+.card-pic img {
+    margin-left: 15vw;
     width: 35vw;
     height: 17vh;
     object-fit: cover;

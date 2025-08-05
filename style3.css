@@ -29,7 +29,7 @@
 }
 
 .card {
-    background-color: rgb(156, 154, 150);
+    background-color: rgb(138, 189, 196);
     width: 28vw;
     height: 90vh;
     border-radius: 9px;
@@ -65,18 +65,6 @@ img {
     padding: 0 0 20px 0;
 }
 
-/* .capsule {
-    padding: 1px;
-    /* text-align: center; 
-    margin-left: 9px;
-}
-
-.capsule span {
-    border: 1px solid black;
-    border-radius: 34px;
-    padding: 3px;
-    font-size: 15px;
-} */
 
 .button {
     text-align: center;
@@ -101,52 +89,6 @@ img {
 }
 
 
-/* .faq{
-    /* background-color: rgb(37, 36, 36); 
-    color: white;
-     margin: auto;
-    margin-top: 23px;
-    
-    max-width: 70vw;
-    /* gap: 
-}
-.faq h2{
-    margin-bottom: 23px;
-}
-
-.faqbox{
-    color: white;
-    background-color: rgb(21,21,34);
-    padding: 18px 13px 18px 21px;
-    font-size: 26px;
-    font-family: sans-serif;
-    font-weight: 100;
-    filter: brightness(201%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* gap: 33px; 
-     margin-bottom: 11px;
-     
-}
-.faqbox:hover{
-    cursor: pointer;
-    background-color: rgb(43, 40, 40);
-} */
-/* .faqbox img{
-    
-    filter: invert(1);
-}
-
-footer{
-    color: rgb(185, 17, 17);
-    max-width: 60vw;
-    margin: auto;
-    padding: 14px;
-}
-footer .questions{
-    padding: 34px 0;
-} */
 
 .footer{
     display: grid;
@@ -191,5 +133,6 @@ footer .questions{
 
 .separate{
     height: 1vh;
-    background-color: rgb(151, 1, 156);
+    /* background-color: rgb(151, 1, 156); */
+    background-image: var(--main-gradient);
 }

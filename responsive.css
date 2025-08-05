@@ -1,0 +1,369 @@
+@media screen and (max-width:700px) {
+
+    .header {
+        height: 37vh;
+        position: sticky;
+        top: 1vh;
+        z-index: 1000;
+        background: transparent;
+
+    }
+
+    .navbar {
+        width: 100%;
+        height: 35vh;
+        display: flex;
+        align-items: center;
+        border: 3px solid rgb(1, 1, 39);
+        border-radius: 19px;
+        /* backdrop-filter: blur(5px); */
+        background-color: #37e5f1ee;
+        justify-content: space-evenly;
+        box-shadow: 0 4px 10px rgba(85, 84, 84, 0.274);
+        animation: fadeInDown 0.5s ease;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+        padding-right: 0vw;
+        width: 60%;
+        gap: 6px;
+        height: 35vh;
+    }
+
+    .navbar ul li {
+        padding-left: 0px;
+        align-items: center;
+        /* justify-content: center; */
+        margin-top: 0px;
+        font-size: 16px;
+        font-weight: 622;
+        font-family: "Segoe UI";
+
+        display: flex;
+
+        cursor: pointer;
+    }
+
+    .navbar ul li a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .navbar ul li a:hover {
+        color: rgb(1, 18, 172);
+        text-shadow: rgb(27, 17, 17);
+        /* border: 1px dashed white; */
+        /* border-radius: 11px; */
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        margin: 0 0px;
+        font-weight: 600;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .right2 {
+        /* width: 20vw; */
+        display: flex;
+        margin-right: 19vw;
+        /* gap: 33px; */
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media only screen and (max-width:700px) {
+
+    .page1 {
+        height: 60vh;
+        width: 100vw;
+        background-image: url(vandebaharat.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* position: absolute; */
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        /* justify-content: center; */
+    }
+
+
+    .page1middle {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+    }
+
+    .hero1 {
+        /* border: 2px solid black; */
+        width: 100vw;
+        height: 45vh;
+        /* font-size: 1.5rem; */
+        padding: 50px;
+        margin: 20px;
+    }
+
+    .hero1 h1 {
+        margin-bottom: 32px;
+        font-size: 2.5rem;
+        animation: textSlide 1.5s ease;
+    }
+
+    .hero1 p {
+        font-weight: 550;
+        font-size: 1.5rem;
+        width: 60vw;
+        color: #0a0a0a;
+    }
+
+
+    /* Hero Section */
+    .hero {
+        width: 85vw;
+        height: 55vh;
+        /* font-size: 1.5rem; */
+        text-align: center;
+        padding: 50px;
+        /* background-color: #cf1212; */
+        border-radius: 10px;
+        margin: 10px;
+        /* margin-right: 3vw; */
+        /* margin-left: 54px; */
+        /* background: linear-gradient(to right, #8299f7a4, #24c5da62); */
+        background: linear-gradient(to right, #c0bfbdc7, #d8d7d7ce, #b7c3e9bb);
+
+        animation: fadeIn 1.5s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .hero h1 {
+        font-family: sans-serif;
+        font-size: 1.5rem;
+        animation: textSlide 1.5s ease;
+    }
+
+    .hero p {
+
+        font-weight: 350;
+        font-size: 1.5rem;
+    }
+
+    .middle {
+        display: flex;
+        align-items: center;
+        height: 40vh;
+    }
+
+    #train-class {
+        width: 16vw;
+        padding: 15px 22px;
+        margin: 23px;
+        border: 1px solid black;
+        border-radius: 12px;
+    }
+
+    /* BY CHATGPT DOWN */
+    select {
+        padding: 12px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #6a11cb, #2575fc);
+        color: #fff;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        appearance: none;
+    }
+
+    select:hover {
+        transform: scale(1.05);
+        background: linear-gradient(90deg, #2575fc, #6a11cb);
+    }
+
+    select option {
+        color: #333;
+        background-color: #fff;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+
+    input {
+        width: 13vw;
+        padding: 11px;
+        margin: 23px;
+        border: 1px solid black;
+        border-radius: 12px;
+
+        padding: 12px 20px;
+        font-size: 16px;
+        /* border: none; */
+        border-radius: 8px;
+        background: linear-gradient(90deg, #6a11cb, #2575fc);
+        color: #ffffff;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        appearance: none;
+    }
+
+    input:hover {
+        transform: scale(1.05);
+        background: linear-gradient(90deg, #2575fc, #6a11cb);
+    }
+
+    input select option {
+        color: #3a3838;
+        background-color: #fff;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    /* BY CHATGPT UP */
+    input::placeholder {
+        color: white;
+    }
+
+
+
+    .cta-btn {
+        font-size: 21px;
+        font-weight: 580;
+        padding: 10px 20px;
+        background-color: #016dda;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .cta-btn:hover {
+        background-color: #012346;
+    }
+
+    /* Features Section */
+    .page2 {
+        height: 111vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background: linear-gradient(90deg, #41f158a2, #4994db); */
+        /* background: linear-gradient(to right, #d9a7c7, #fffcdc); */
+        background-color: rgb(253, 252, 252);
+    }
+
+    .page2-text {
+        font-size: 1.1em;
+        font-weight: 700;
+        width: 55vw;
+        text-align: center;
+
+    }
+
+    .page3-text {
+        font-size: 1.1em;
+        font-weight: 700;
+        width: 55vw;
+        text-align: center;
+
+    }
+
+    .features {
+
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+        flex-wrap: wrap;
+    }
+
+    .feature-card {
+
+        background-color: #fff;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        text-align: center;
+        display: flex;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .card1 {
+        width: 90vw;
+        height: 18vh;
+        background-image: var(--main-gradient);
+
+    }
+
+    .card2 {
+        width: 90vw;
+        height: 18vh;
+        background-image: var(--main-gradient);
+    }
+
+    .card3 {
+        width: 90vw;
+        height: 18vh;
+        background-image: var(--main-gradient);
+    }
+
+    .para1 {
+        color: white;
+        font-size: x-large;
+        font-weight: 600;
+        text-decoration: underline;
+        display: flex;
+        justify-items: flex-start;
+        padding-left: 13vw;
+        /* text-align: justify; */
+    }
+
+    .para2 {
+        width: 38vw;
+        font-size: 21px;
+        font-weight: 180;
+    }
+
+
+    .card-pic img {
+        margin-left: 15vw;
+        width: 35vw;
+        height: 17vh;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background: #333;
+        color: white;
+    }
+
+}
