@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailConnect Registration</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #01495e, #014291);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            color: white;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .signin-link {
+            text-align: right;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .signin-link a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        span {
+            margin-right: 3vw;
+        }
+
+        #captchaText {
+            margin-bottom: 2vh;
+        }
+
+
+        input,
+        select {
+            width: 90%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        input::placeholder {
+            color: #ddd;
+        }
+
+        input:focus {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .show-hide {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            color: white;
+            font-weight: 567;
+            font-size: 22px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:disabled {
+            background: gray;
+            cursor: not-allowed;
+        }
+
+        .btn:hover:not(:disabled) {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 500px) {
+            h2 {
+                font-size: 20px;
+            }
+
+            .btn {
+                font-size: 14px;
+            }
+        }
+
+        #country option {
+            background-color: black;
+            color: white;
+        }
+
+        /* .captcha-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .captcha-text {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            letter-spacing: 2px;
+        } */
+
+
+        .captcha-box {
+            width: 14vw;
+            height: 4vh;
+            display: inline-block;
+
+            padding: 11px;
+            border-radius: 8px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 22px;
+            color: white;
+        }
+
+        .captcha-container {
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .captcha-input {
+            padding: 10px;
+            margin-bottom: 3vh;
+            width: 22vw;
+            border-radius: 6px;
+            border: 2px solid transparent;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .refresh-btn {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 1.5vh;
+        }
+
+        .refresh-btn:hover {
+            background-color: #7e6d6d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Create Your RailConnect Account</h2>
+        <div class="signin-link">
+            Already have an account? <a href="loginpage.html">Sign In</a>
+        </div>
+
+        <label>Full Name</label>
+        <div class="form-group">
+            <input type="text" id="fullname" placeholder="Full Name">
+        </div>
+
+        <label>Create New Password</label>
+        <div class="form-group">
+            <input type="password" id="password" placeholder="Create New Password">
+            <span class="show-hide" onclick="togglePassword('password', this)">👁</span>
+        </div>
+
+        <label>Confirm Password</label>
+        <div class="form-group">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            <span class="show-hide" onclick="togglePassword('confirmPassword', this)">👁</span>
+        </div>
+
+        <label>Enter Email</label>
+        <div class="form-group">
+            <input type="email" id="email" placeholder="Email">
+        </div>
+
+        <label>Select Country</label>
+        <div class="form-group">
+            <select id="country">
+                <option value="">Select Country</option>
+                <option value="India">India</option>
+                <option value="Russia">Russia</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+            </select>
+        </div>
+
+        <label>Enter Mobile Number</label>
+        <div class="form-group">
+            <input type="text" id="mobile" placeholder="Mobile Number">
+        </div>
+
+        <label>Username</label>
+        <div class="form-group">
+            <input type="text" id="username" placeholder="Create Username">
+        </div>
+
+        <label>Enter Captcha</label>
+        <!-- <div class="form-group">
+            <input type="text" id="captchaText" placeholder="Captcha" disabled>
+            <input type="text" id="captchaInput" placeholder="Enter Captcha">
+        </div> -->
+
+
+
+        <div class="captcha-container">
+            <div class="captcha-box">
+                <input type="text" id="captchaText" placeholder="Captcha" disabled>
+            </div>
+            <button class="refresh-btn" onclick="generateCaptcha()">↻</button>
+        </div>
+
+        <input type="text" id="captchaInput" class="captcha-input" placeholder="Enter captcha text"
+            oninput="validateCaptcha()">
+
+
+        <!-- <div class="captcha-box">
+            <div class="captcha-text" id="captchaText"></div>
+            <button type="button" onclick="generateCaptcha()"
+                style="width: auto; padding: 10px 15px; font-size: 12px;">↻</button>
+        </div> -->
+
+        <button class="btn" id="submitBtn" disabled>Submit</button>
+    </div>
+
+    <script>
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+        const captchaText = document.getElementById('captchaText');
+        const captchaInput = document.getElementById('captchaInput');
+        const submitBtn = document.getElementById('submitBtn');
+
+        function togglePassword(id, el) {
+            const input = document.getElementById(id);
+            if (input.type === 'password') {
+                input.type = 'text';
+                el.textContent = '🙈';
+            } else {
+                input.type = 'password';
+                el.textContent = '👁️';
+            }
+        }
+
+        function generateCaptcha() {
+            let chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz23456789";
+            let captcha = "";
+            for (let i = 0; i < 6; i++) {
+                captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            captchaText.value = captcha;
+        }
+
+
+        // function generateCaptcha() {
+        //         let chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+        //         let captcha = "";
+        //         for (let i = 0; i < 6; i++) {
+        //             captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+        //         }
+        //         document.getElementById("captchaText").textContent = captcha;
+        //     }
+        //     generateCaptcha();
+
+        function validateForm() {
+            let allFilled = document.querySelectorAll('input, select');
+            let isValid = true;
+
+            allFilled.forEach(field => {
+                if (field.type !== 'button' && field.id !== 'captchaText' && field.value.trim() === '') {
+                    isValid = false;
+                }
+            });
+
+            if (password.value && confirmPassword.value) {
+                if (password.value === confirmPassword.value) {
+                    confirmPassword.style.border = '2px solid lightgreen';
+                } else {
+                    confirmPassword.style.border = '2px solid red';
+                    isValid = false;
+                }
+            }
+
+            if (captchaInput.value) {
+                if (captchaInput.value === captchaText.value) {
+                    captchaInput.style.border = '2px solid lightgreen';
+                } else {
+                    captchaInput.style.border = '2px solid red';
+                    isValid = false;
+                }
+            }
+
+            submitBtn.disabled = !isValid;
+        }
+
+        submitBtn.addEventListener('click', () => {
+            alert('Registration Successful!');
+        });
+
+        document.querySelectorAll('input, select').forEach(el => {
+            el.addEventListener('input', validateForm);
+        });
+
+        generateCaptcha();
+
+
+
+        // captchaText = "";
+
+        // // Function to generate random captcha
+        // function generateCaptcha() {
+        //     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        //     let captcha = "";
+        //     for (let i = 0; i < 6; i++) {
+        //         captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+        //     }
+        //     captchaText = captcha;
+        //     document.getElementById("captcha").innerText = captcha;
+        //     document.getElementById("captcha-input").value = "";
+        //     document.getElementById("captcha-input").style.borderColor = "transparent";
+        // }
+
+        // // Function to validate captcha
+        // function validateCaptcha() {
+        //     let userValue = document.getElementById("captcha-input").value;
+        //     if (userValue === "") {
+        //         document.getElementById("captcha-input").style.borderColor = "transparent";
+        //     } else if (userValue === captchaText) {
+        //         document.getElementById("captcha-input").style.borderColor = "green";
+        //     } else {
+        //         document.getElementById("captcha-input").style.borderColor = "red";
+        //     }
+        // }
+
+        // // Initial captcha load
+        // generateCaptcha();
+    </script>
+
+</body>
+
+</html>
