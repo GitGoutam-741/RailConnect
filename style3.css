@@ -103,6 +103,7 @@ img {
     color: white;
     /* width: 10vw; */
     padding: 4px;
+    text-decoration: none;
 }
 .footer-item{
     display: flex;
