@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to RailConnect</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #01495e, #014291);
+            /* Changed to blue gradient */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            /* More padding for vertical size */
+            width: 380px;
+            /* Slightly wider */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            animation: slideIn 1s ease forwards;
+            color: white;
+            min-height: 480px;
+            /* Increased vertical size */
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab-buttons button {
+            background: transparent;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 16px;
+            color: white;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-buttons button.active {
+            border-bottom: 2px solid #fff;
+        }
+
+        input {
+            width: 91%;
+            padding: 14px;
+            /* Bigger input height */
+            margin: 12px 0;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 16px;
+            /* Increased font size */
+            transition: 0.3s;
+        }
+
+        input::placeholder {
+            color: #ddd;
+            font-size: 15px;
+        }
+
+        input:focus {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(87deg, #31c41d, #067414);
+            color: #fcfafa;
+            font-weight: 567;
+            font-size: 22px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: linear-gradient(57deg, #067414, #31c41d);
+            transform: scale(1.05);
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px;
+            transition: 0.3s;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>Sign In</h2>
+
+        <div class="tab-buttons">
+            <button id="passwordTab" class="active" onclick="showTab('password')">Password</button>
+            <button id="otpTab" onclick="showTab('otp')">OTP</button>
+        </div>
+
+        <div id="passwordForm">
+            <input type="text" placeholder="Username or Mobile Number" id="username">
+            <input type="password" placeholder="Password" id="password">
+            <button id="submitBtn" class="btn">Login</button>
+        </div>
+
+        <div id="otpForm" style="display:none;">
+            <input type="text" placeholder="Mobile Number" id="mobile">
+            <button class="btn" onclick="sendOTP()">Send OTP</button>
+            <input type="text" placeholder="Enter OTP" id="otp">
+            <button id="log" class="btn">Verify & Login</button>
+        </div>
+
+        <div class="links">
+            <a href="#">Forgot Password?</a> |
+            <a href="registrationpage.html">New Registration</a>
+        </div>
+
+
+    </div>
+
+    <script>
+        function showTab(tab) {
+            document.getElementById("passwordForm").style.display = tab === 'password' ? 'block' : 'none';
+            document.getElementById("otpForm").style.display = tab === 'otp' ? 'block' : 'none';
+            document.getElementById("passwordTab").classList.toggle("active", tab === 'password');
+            document.getElementById("otpTab").classList.toggle("active", tab === 'otp');
+        }
+
+        function sendOTP() {
+            alert("OTP sent to your mobile number!");
+        }
+
+        document.getElementById("submitBtn").addEventListener("click", function () {
+            alert("Login Successful!");
+        });
+
+          document.getElementById("log").addEventListener("click", function () {
+            alert("Login Successful!");
+        });
+    </script>
+
+</body>
+
+</html>
