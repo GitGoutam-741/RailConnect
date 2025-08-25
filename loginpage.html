@@ -168,6 +168,7 @@
     </div>
 
     <script>
+
         function showTab(tab) {
             document.getElementById("passwordForm").style.display = tab === 'password' ? 'block' : 'none';
             document.getElementById("otpForm").style.display = tab === 'otp' ? 'block' : 'none';
@@ -176,16 +177,38 @@
         }
 
         function sendOTP() {
-            alert("OTP sent to your mobile number!");
+            let mobile = document.getElementById("mobile").value.trim();
+            if (/^\d{10}$/.test(mobile)) {
+                alert("OTP sent to your mobile number!");
+            } else {
+                alert("Please enter a valid 10-digit mobile number before sending OTP.");
+            }
         }
 
         document.getElementById("submitBtn").addEventListener("click", function () {
-            alert("Login Successful!");
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+
+            if (username !== "" && password !== "") {
+                alert("Login Successful!");
+                window.location.href = "index.html";
+            } else {
+                alert("Please enter both Username/Mobile Number and Password.");
+            }
         });
 
-          document.getElementById("log").addEventListener("click", function () {
-            alert("Login Successful!");
+        document.getElementById("log").addEventListener("click", function () {
+            let mobile = document.getElementById("mobile").value.trim();
+            let otp = document.getElementById("otp").value.trim();
+
+            if (mobile !== "" && otp !== "") {
+                alert("Login Successful!");
+                window.location.href = "index.html";
+            } else {
+                alert("Please enter both Mobile Number and OTP.");
+            }
         });
+
     </script>
 
 </body>

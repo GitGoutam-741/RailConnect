@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Indian Railways – Live Train Status (Offline Dataset)</title>
+  <link rel="stylesheet" href="liveTrain.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <span class="logo">🚂</span>
+      <h1>Indian Railways</h1>
+      <p>Live Train Status </p>
+    </div>
+    <button id="themeToggle" class="btn theme">Dark Mode</button>
+  </header>
+
+  <main class="container">
+    <!-- Search by Stations -->
+    <section class="card">
+      <h2>Search by Route</h2>
+      <div class="grid-2">
+        <div class="input-wrap">
+          <label for="fromStation">From Station</label>
+          <input type="text" id="fromStation" placeholder="Code or Name (e.g., NDLS or New Delhi)" autocomplete="off" />
+          <div id="fromSuggestions" class="suggestions"></div>
+        </div>
+        <div class="input-wrap">
+          <label for="toStation">To Station</label>
+          <input type="text" id="toStation" placeholder="Code or Name (e.g., BCT or Mumbai Central)" autocomplete="off" />
+          <div id="toSuggestions" class="suggestions"></div>
+        </div>
+      </div>
+
+      <div class="filters">
+        <div class="filter-item">
+          <label for="trainType">Filter by Type</label>
+          <select id="trainType">
+            <option value="all">All</option>
+            <option value="rajdhani">Rajdhani</option>
+            <option value="shatabdi">Shatabdi</option>
+            <option value="vande bharat">Vande Bharat</option>
+            <option value="duronto">Duronto</option>
+            <option value="humsafar">Humsafar</option>
+            <option value="sampark kranti">Sampark Kranti</option>
+            <option value="express">Express</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label for="sortBy">Sort by</label>
+          <select id="sortBy">
+            <option value="none">None</option>
+            <option value="departure">Departure (from your origin)</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <button id="searchBtn" class="btn primary">Search Trains</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search by Train -->
+    <section class="card">
+      <h2>Search by Train (Name or Number)</h2>
+      <div class="grid-2">
+        <div class="input-wrap">
+          <label for="trainSearch">Train</label>
+          <input type="text" id="trainSearch" placeholder="e.g., 12951 or Mumbai Rajdhani" autocomplete="off" />
+        </div>
+      </div>
+      <p class="muted">Tip: Start typing the train name or number to see results instantly.</p>
+    </section>
+
+    <!-- Results -->
+    <section class="card">
+      <div class="results-header">
+        <h2>Results</h2>
+        <div id="resultMeta" class="muted"></div>
+      </div>
+      <ul id="trainList" class="train-list"></ul>
+    </section>
+  </main>
+
+  <!-- Data (must load before main JS) -->
+  <script src="stations.js"></script>
+  <script src="routes.js"></script>
+
+  <!-- App -->
+  <script src="liveTrain.js"></script>
+</body>
+</html>

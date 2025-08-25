@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Railways Ticket Status</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #333;
+        transition: background 0.3s, color 0.3s;
+    }
+    header {
+        text-align: center;
+        padding: 15px;
+        background: linear-gradient(90deg, #ff6a00, #ffb347);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .container h2 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #ff6a00;
+        color: white;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    button:hover {
+        background: #e65c00;
+    }
+    .theme-toggle {
+        margin: 20px auto;
+        display: block;
+        padding: 8px 12px;
+        background: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    /* Dark Mode */
+    body.dark {
+        background: #1e1e1e;
+        color: #fff;
+    }
+    body.dark .container {
+        background: #2c2c2c;
+        color: #fff;
+    }
+    body.dark header {
+        background: linear-gradient(90deg, #333, #666);
+    }
+    body.dark button {
+        background: #444;
+    }
+</style>
+</head>
+<body>
+
+<header>🚆 Indian Railways Ticket Status</header>
+
+<div class="container">
+    <h2>Check Your PNR Status</h2>
+    <input type="text" id="pnrInput" placeholder="Enter 10-digit PNR Number" maxlength="10">
+    <button onclick="checkStatus()">Check Status</button>
+</div>
+
+<button class="theme-toggle" onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+
+<script>
+function checkStatus() {
+    const pnr = document.getElementById('pnrInput').value.trim();
+    if (pnr.length === 10 && !isNaN(pnr)) {
+        const url = `https://www.irctc.co.in/nget/train-search`; // Official IRCTC PNR status page
+        window.open(url, '_blank');
+    } else {
+        alert('Please enter a valid 10-digit PNR number.');
+    }
+}
+
+function toggleTheme() {
+    document.body.classList.toggle('dark');
+}
+</script>
+
+</body>
+</html>
