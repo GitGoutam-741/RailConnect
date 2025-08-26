@@ -20,10 +20,11 @@
         <div class="navbar">
             <ul>
                 <li><a href="#" class="logo">RailConnect</a></li>
-                <li><a href="#">Train Time</a></li>
-                <li><a href="#">Ticket Booking</a></li>
-                <li><a href="#">Ticket Status</a></li>
-                <li><a href="#">Make a Travel Plan</a></li>
+                <li><a href="liveTrain.html" target="_blank" >Train Time</a></li>
+                <li><a href="bookTicket.html" target="_blank" >Ticket Booking</a></li>
+                <li><a href="ticketStatus.html" target="_blank" >Ticket Status</a></li>
+                <li><a href="travelPlan.html" target="_blank" >Make a Travel Plan</a></li>
+                <li class="badge" ><button id="theme-toggle" >🌙</button></li>
 
                 <div class="right2">
                     <!-- <li> <img src="global-stroke-rounded.svg" alt=""> <span> English </span></li> -->
@@ -78,7 +79,8 @@
 
                     </div>
                 </div>
-                <button class="cta-btn"><a target="_blank" href="https://www.irctc.co.in/nget/booking/train-list">Book Tickets Now</a></button>
+                <button class="cta-btn"><a href="bookTicket.html" target="_blank
+                    " >Book Tickets Now</a></button>
             </section>
         </div>
     </div>
@@ -284,7 +286,7 @@
     <!-- </footer> -->
 
 
-    <script>
+    <!-- <script>
         // Filter Function for Search
         document.getElementById("dropdownSearch").addEventListener("input", function () {
             const filter = this.value.toLowerCase();
@@ -293,7 +295,7 @@
                 item.style.display = item.textContent.toLowerCase().includes(filter) ? "block" : "none";
             });
         });
-    </script>
+    </script> -->
 
 </body>
 

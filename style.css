@@ -98,11 +98,41 @@ body {
     width: 100%;
 }
 
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(270deg, #ff0000, #ff9900, #00ff00, #00ccff, #9900ff, #ff00cc);
+    background-size: 1200% 1200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: flowingColors 5s ease infinite;
+}
+
+@keyframes flowingColors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 /* CHATGPT UP */
 
 .navbar ul li img {
     margin: 0;
     padding: 0;
+}
+
+.badge button{
+    width: 28px;
+    height: 28px;
+    border: 2px solid black;
+    border-radius: 50%;
 }
 
 .right2 {
@@ -309,6 +339,10 @@ input::placeholder {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.cta-btn a{
+    text-decoration: none;
+    color: white;
 }
 
 .cta-btn:hover {

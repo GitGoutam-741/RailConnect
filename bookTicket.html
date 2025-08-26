@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Railway Ticket Booking</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #a5afdb;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+header {
+    /* background: #0078d7; */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    background: linear-gradient(78deg, darkblue, purple);
+}
+header button {
+    margin-left: 20px;
+    padding: 8px 12px;
+    background: #a1cea4;
+    color: #013763;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: bold;
+}
+header button:hover {
+    background: #f0f0f0;
+}
+main {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+.booking-form {
+    background: #89a0a0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.autocomplete-list {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 10;
+    display: none;
+}
+.autocomplete-item {
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-item:hover {
+    background: #f0f0f0;
+}
+button[type="submit"] {
+    background: #0078d7;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button[type="submit"]:hover {
+    background: #005bb5;
+}
+.irctc-link {
+    margin-top: 20px;
+    text-align: center;
+}
+.btn-link {
+    display: inline-block;
+    background: darkgreen;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.btn-link:hover {
+    background: #218838;
+    border: 2px solid white;
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    /* background: #f1f1f1; */
+    background: linear-gradient(78deg, darkblue, purple);
+}
+footer p{
+    color: white;
+}
+footer a{
+    text-decoration: none;
+    color: #919090;
+}
+
+.dark-mode {
+    background: #121212;
+    color: #f9f9f9;
+}
+.dark-mode header {
+    /* background: #222; */
+    background: linear-gradient(78deg, darkblue, purple);
+}
+.dark-mode .booking-form {
+    background: #1e1e1e;
+    color: #fff;
+}
+.dark-mode input, .dark-mode select {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+.dark-mode footer {
+    /* background: #2b2a2a; */
+    background: linear-gradient(78deg, darkblue, purple);
+}
+.span button{
+
+    padding-block: 0px;
+    padding-inline: 0px;
+    border-width: 0px;
+    border-style:none;
+    border-radius: 4px;
+    border-color:red;
+    /* border-image: initial; */
+}
+
+</style>
+</head>
+<body>
+<header>
+    <!-- 🚂  -->
+    <h1>🚅RailConnect</h1>
+    <h2>Indian Railway Ticket Booking</h2>
+    <button id="themeToggle">Dark Mode</button>
+</header>
+<main>
+    <section class="booking-form">
+        <h2>Book Your Train Ticket</h2>
+        <span class="span" ><button><a href="https://www.utsonmobile.indianrail.gov.in/login;jsessionid=BBE420F692762EA40B63757053A1D0F3?0" target="_blank" class="btn-link" style="margin: 0;" >Book unreserved Ticket</a></button></span>
+        <form id="ticketForm">
+            <div class="form-group">
+                <label for="fromStation">From:</label>
+                <input type="text" id="fromStation" placeholder="Enter From Station" autocomplete="off">
+                <div id="fromSuggestions" class="autocomplete-list"></div>
+            </div>
+            <div class="form-group">
+                <label for="toStation">To:</label>
+                <input type="text" id="toStation" placeholder="Enter To Station" autocomplete="off">
+                <div id="toSuggestions" class="autocomplete-list"></div>
+            </div>
+            <div class="form-group">
+                <label for="journeyDate">Journey Date:</label>
+                <input type="date" id="journeyDate">
+            </div>
+            <div class="form-group">
+                <label for="classType">Class:</label>
+                <select id="classType">
+                    <option value="SL">Sleeper (SL)</option>
+                    <option value="3A">AC 3 Tier (3A)</option>
+                    <option value="2A">AC 2 Tier (2A)</option>
+                    <option value="1A">AC First Class (1A)</option>
+                    <option value="CC">Chair Car (CC)</option>
+                </select>
+            </div>
+            <button type="submit">Check Availability</button>
+        </form>
+    </section>
+    <section class="irctc-link">
+        <h3>Proceed to Official IRCTC Website</h3>
+        <a href="https://www.irctc.co.in" target="_blank" class="btn-link">Go to IRCTC</a>
+    </section>
+</main>
+<footer>
+    <p>Powered by Indian Railways | <a href="https://www.irctc.co.in" target="_blank">IRCTC Official Site</a></p>
+</footer>
+
+<!-- Load stations.js -->
+<script src="stations.js"></script>
+
+<script>
+const themeToggle = document.getElementById("themeToggle");
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    themeToggle.textContent = document.body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
+});
+
+const fromInput = document.getElementById("fromStation");
+const toInput = document.getElementById("toStation");
+const fromSuggestions = document.getElementById("fromSuggestions");
+const toSuggestions = document.getElementById("toSuggestions");
+
+function showSuggestions(input, suggestionsBox) {
+    const query = input.value.toLowerCase();
+    suggestionsBox.innerHTML = "";
+    if (!query) {
+        suggestionsBox.style.display = "none";
+        return;
+    }
+    const matches = window.stations.filter(st => st.name.toLowerCase().includes(query) || st.code.toLowerCase().includes(query));
+    if (matches.length === 0) {
+        suggestionsBox.style.display = "none";
+        return;
+    }
+    matches.forEach(st => {
+        const div = document.createElement("div");
+        div.classList.add("autocomplete-item");
+        div.textContent = `${st.name} (${st.code})`;
+        div.addEventListener("click", () => {
+            input.value = `${st.name} (${st.code})`;
+            suggestionsBox.style.display = "none";
+        });
+        suggestionsBox.appendChild(div);
+    });
+    suggestionsBox.style.display = "block";
+}
+
+fromInput.addEventListener("input", () => showSuggestions(fromInput, fromSuggestions));
+toInput.addEventListener("input", () => showSuggestions(toInput, toSuggestions));
+
+document.getElementById("ticketForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const from = fromInput.value;
+    const to = toInput.value;
+    const date = document.getElementById("journeyDate").value;
+    const classType = document.getElementById("classType").value;
+    if (!from || !to || !date) {
+        alert("Please fill all fields");
+        return;
+    }
+    alert(`Checking availability for:
+From: ${from}
+To: ${to}
+Date: ${date}
+Class: ${classType}
+
+Redirecting to IRCTC website...`);
+    window.open("https://www.irctc.co.in", "_blank");
+});
+</script>
+</body>
+</html>

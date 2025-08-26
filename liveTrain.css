@@ -1,0 +1,283 @@
+:root {
+    --bg: #f7f7fb;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --primary: #2563eb;
+    --chip: #eef2ff;
+}
+
+body.dark-mode {
+    --bg: #0b0f17;
+    --card: #101522;
+    --text: #eef2ff;
+    --muted: #94a3b8;
+    --border: #1f2937;
+    --primary: #60a5fa;
+    --chip: #0b2148;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text)
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--card);
+    position: sticky;
+    top: 0;
+    z-index: 10
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px
+}
+
+.brand .logo {
+    font-size: 28px
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 20px
+}
+
+.brand p {
+    margin: 2px 0 0;
+    color: var(--muted);
+    font-size: 12px
+}
+
+.container {
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 0 16px
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04)
+}
+
+h2 {
+    margin: 0 0 12px 0;
+    font-size: 18px
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px
+}
+
+@media (max-width:760px) {
+    .grid-2 {
+        grid-template-columns: 1fr
+    }
+}
+
+.input-wrap {
+    position: relative
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 6px
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    outline: none
+}
+
+input::placeholder {
+    color: var(--muted)
+}
+
+.btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    cursor: pointer
+}
+
+.btn.primary {
+    background: var(--primary);
+    border-color: transparent;
+    color: white
+}
+
+.btn.theme {
+    min-width: 120px
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+    align-items: end;
+    flex-wrap: wrap;
+    margin-top: 12px
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 12px
+}
+
+.train-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.train-card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+    background: var(--card)
+}
+
+.train-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap
+}
+
+.train-title {
+    font-weight: 700
+}
+
+.train-type {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--chip);
+    border: 1px solid var(--border)
+}
+
+.train-sub {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 4px
+}
+
+.stops {
+    margin-top: 10px;
+    border-top: 1px dashed var(--border);
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 6px
+}
+
+.stop {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid var(--border);
+    padding: 8px;
+    border-radius: 10px
+}
+
+.stop-left {
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.code {
+    font-weight: 700
+}
+
+.arrdep {
+    font-variant-numeric: tabular-nums
+}
+
+.pf {
+    font-size: 12px;
+    color: var(--muted)
+}
+
+.suggestions {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+    z-index: 20;
+    max-height: 220px;
+    overflow: auto;
+    display: none
+}
+
+.suggestions.show {
+    display: block
+}
+
+.suggestion-item {
+    padding: 10px 12px;
+    cursor: pointer
+}
+
+.suggestion-item:hover {
+    background: rgba(0, 0, 0, 0.04)
+}
+
+.badge {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--chip);
+    border: 1px solid var(--border);
+    font-size: 12px
+}
