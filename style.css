@@ -187,7 +187,56 @@ body {
     display: flex;
     /* align-items: center; */
     justify-content: center;
+
+
+
 }
+input {
+  padding: 10px;
+  width: 220px;
+  border-radius: 6px;
+  border: 1px solid #888;
+}
+.input-box {
+  margin-top: 7px;
+  position: relative;
+  display: inline-block;
+}
+
+
+/* Container for suggestions */
+.suggestions {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 1000;
+  display: none;
+}
+
+/* Each suggestion item */
+.suggestion-item {
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Hover effect */
+.suggestion-item:hover {
+  background: #f0f0f0;
+}
+
+
+
+
+
+
+
+
 
 .hero1 {
     /* border: 2px solid black; */
@@ -316,16 +365,16 @@ input:hover {
     background: linear-gradient(90deg, #2575fc, #6a11cb);
 }
 
-input select option {
-    color: #3a3838;
-    background-color: #fff;
+select option {
+    color:black;
+    background-color: #f7f5f5;
     font-size: 15px;
     padding: 10px;
 }
 
 /* BY CHATGPT UP */
 input::placeholder {
-    color: white;
+    color: #fffdfd;
 }
 
 
@@ -339,6 +388,7 @@ input::placeholder {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition:background 0.2s
 }
 .cta-btn a{
     text-decoration: none;
