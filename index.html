@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-theme="light">
     <title>RailConnect</title>
     <link rel="website icon" type="png" href="download (2).jpeg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style3.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="theme.css">
 
 
 </head>
@@ -19,11 +20,13 @@
         <div class="navbar">
             <ul>
                 <li><a href="#" class="logo">RailConnect</a></li>
-                <li><a href="liveTrain.html" target="_blank" >Train Time</a></li>
-                <li><a href="bookTicket.html" target="_blank" >Ticket Booking</a></li>
-                <li><a href="ticketStatus.html" target="_blank" >Ticket Status</a></li>
-                <li><a href="travelPlan.html" target="_blank" >Make a Travel Plan</a></li>
-                <li class="badge" ><button id="theme-toggle" >🌙</button></li>
+                <li><a href="liveTrain.html" target="_blank">Train Time</a></li>
+                <li><a href="bookTicket.html" target="_blank">Ticket Booking</a></li>
+                <li><a href="ticketStatus.html" target="_blank">Ticket Status</a></li>
+                <li><a href="travelPlan.html" target="_blank">Make a Travel Plan</a></li>
+                <li class="badge"><button id="themeToggle">
+                        <span id="themeIcon">🌙</span>
+                    </button></li>
 
                 <div class="right2">
                     <!-- <li> <img src="global-stroke-rounded.svg" alt=""> <span> English </span></li> -->
@@ -52,6 +55,7 @@
             <section class="hero">
                 <h1>BOOK TICKET</h1>
                 <div class="middle">
+<<<<<<< HEAD
                     <div class="from">
                          <div class="input-box">
      <label for="fromStation"></label>
@@ -65,6 +69,21 @@
     <div id="toSuggestions" class="suggestions"></div>
   </div>
                     </div>
+=======
+                <form id="ticketForm">
+
+            <div class="form-group">
+                <!-- <label for="fromStation">From:</label> -->
+                <input type="text" id="fromStation" placeholder="Enter From Station" autocomplete="off">
+                <div id="fromSuggestions" class="autocomplete-list"></div>
+            </div>
+            <div class="form-group">
+                <!-- <label for="toStation">To:</label> -->
+                <input type="text" id="toStation" placeholder="Enter To Station" autocomplete="off">
+                <div id="toSuggestions" class="autocomplete-list"></div>
+            </div>
+                </form>
+>>>>>>> ff2112a (theme Updated and search option improved)
                     <div class="date">
                         <input class="page1date" type="date">
 
@@ -86,7 +105,7 @@
                     </div>
                 </div>
                 <button class="cta-btn"><a href="bookTicket.html" target="_blank
-                    " >Book Tickets Now</a></button>
+                    ">Book Tickets Now</a></button>
             </section>
         </div>
     </div>
@@ -257,16 +276,25 @@
             <a target="_blank" href="https://contents.irctc.co.in/en/CancellationRulesforIRCTCTrain.pdf">Ticket
                 Cancellation Rules</a>
             <a target="_blank" href="https://contents.irctc.co.in/en/IRCTC_Trains_FT_TnC.pdf">Foreign Tourist T&C</a>
+<<<<<<< HEAD
             <a target="_blank" href="https://contents.irctc.co.in/en/Terms%20and%20conditions.pdf">Terms & Conditions</a>
             <a target="_blank" href="https://www.indianrail.gov.in/enquiry/PNR/PnrEnquiry.html?locale=en">PNR Enquiry</a>
             <a target="_blank" href="https://enquiry.indianrail.gov.in/mntes/">Train Enquiry</a>
+=======
+            <a target="_blank" href="https://contents.irctc.co.in/en/Terms%20and%20conditions.pdf">Terms &
+                Conditions</a>
+            <a target="_blank" href="">PNR Enquiry</a>
+            <a target="_blank" href="">Train Enquiry</a>
+>>>>>>> ff2112a (theme Updated and search option improved)
         </div>
 
         <div class="footer-item">
             <a target="_blank" href="1st_merged.pdf">Important Information</a>
             <a target="_blank" href="https://contents.irctc.co.in/en/ListofBlackListAgent.pdf">Black list Agents</a>
-            <a target="_blank" href="https://contents.irctc.co.in/en/Rules%20&%20Regulations%20for%20the%20Agents.pdf">Rules and Regulations for the Agents</a>
-        
+            <a target="_blank"
+                href="https://contents.irctc.co.in/en/Rules%20&%20Regulations%20for%20the%20Agents.pdf">Rules and
+                Regulations for the Agents</a>
+
             <a target="_blank" href="https://www.the-maharajas.com/">Maharaja's Express</a>
             <a target="_blank" href="faq">Person With Disability Booking</a>
         </div>
@@ -294,7 +322,25 @@
     <!-- </footer> -->
 
 
+<<<<<<< HEAD
     <script src="script.js"></script>
+=======
+    <!-- <script>
+        // Filter Function for Search
+        document.getElementById("dropdownSearch").addEventListener("input", function () {
+            const filter = this.value.toLowerCase();
+            const items = document.querySelectorAll("#dropdownList li:not(.group)");
+            items.forEach(item => {
+                item.style.display = item.textContent.toLowerCase().includes(filter) ? "block" : "none";
+            });
+        });
+    </script> -->
+    <script src="stations.js"></script>
+    <script src="bookTicket.js"></script>
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+    <!-- <script src="liveTrain.js"></script> -->
+>>>>>>> ff2112a (theme Updated and search option improved)
 
 </body>
 

@@ -1,0 +1,41 @@
+:root{
+    --bg-color:white;
+    --text-color:black;
+}
+
+[data-theme ="dark"]{
+    --bg-color:black;
+    --text-color:white;
+    --blur:rgba(8, 8, 8, 0.548);
+}
+
+body ,.page2,.page3,.footer-bottom{
+    /* margin: 0; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+.header{
+     background-color: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+.hero{
+    color: black;
+    /* background-color: var(--bg-color); */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button{
+    /* position: absolute; */
+    /* right: 5vw; */
+    /* width: 12vw; */
+    padding: 10px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}

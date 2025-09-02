@@ -14,7 +14,9 @@ body {
 }
 
 .header {
+    width: 100vw;
     height: 14vh;
+    /* padding: 11px; */
     position: sticky;
     top: 1vh;
     z-index: 1000;
@@ -25,7 +27,7 @@ body {
 .navbar {
     width: 90vw;
     height: 12vh;
-    margin-top: 1.5vh;
+    /* margin-top: 2.5vh; */
     margin-left: 5vw;
     border: 3px solid rgb(1, 1, 39);
     border-radius: 19px;
@@ -128,12 +130,12 @@ body {
     padding: 0;
 }
 
-.badge button{
+/* .badge button{
     width: 28px;
     height: 28px;
     border: 2px solid black;
     border-radius: 50%;
-}
+} */
 
 .right2 {
     width: 20vw;
@@ -259,6 +261,7 @@ input {
 .hero1 p {
     font-weight: 400;
     font-size: 1.5rem;
+    font-weight: 900;
 }
 
 /* BY CHATGPT */
@@ -336,6 +339,27 @@ select option {
     background-color: #fff;
     font-size: 15px;
     padding: 10px;
+}
+
+
+.autocomplete-list {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 16vw;
+    z-index: 10;
+    display: none;
+    font-size: 1rem;
+}
+.autocomplete-item {
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-item:hover {
+    background: #f0f0f0;
 }
 
 
