@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 // Filter Function for Search
         document.getElementById("dropdownSearch").addEventListener("input", function () {
@@ -70,3 +71,39 @@ function setupAutocomplete(inputId, suggestionId) {
 setupAutocomplete("fromStation", "fromSuggestions");
 setupAutocomplete("toStation", "toSuggestions");
 
+=======
+// script.js
+
+async function registerUser(e) {
+  e.preventDefault();
+
+  const username = document.getElementById("reg-username").value;
+  const password = document.getElementById("reg-password").value;
+  const email = document.getElementById("reg-email").value;
+
+  const res = await fetch("/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, password, email })
+  });
+
+  const data = await res.json();
+  alert(data.message);
+}
+
+async function loginUser(e) {
+  e.preventDefault();
+
+  const username = document.getElementById("login-username").value;
+  const password = document.getElementById("login-password").value;
+
+  const res = await fetch("/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, password })
+  });
+
+  const data = await res.json();
+  alert(data.message);
+}
+>>>>>>> Stashed changes
