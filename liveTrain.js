@@ -13,7 +13,7 @@ themeToggle.addEventListener("click", () => {
     themeToggle.textContent = dark ? "Light Mode" : "Dark Mode";
 });
 
-// =============== DOM HOOKS ===============
+// =============== DOM HOOKS ========= ======
 const fromInput = document.getElementById("fromStation");
 const toInput = document.getElementById("toStation");
 const fromSuggestions = document.getElementById("fromSuggestions");
